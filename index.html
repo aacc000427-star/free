@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Roblox 玩家查詢器</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="hero glass">
+      <div class="badge">ROBLOX PLAYER LOOKUP</div>
+      <h1>玩家查詢器</h1>
+      <p>查詢 Roblox 玩家公開資料</p>
+
+      <form id="searchForm" class="search">
+        <input id="username" placeholder="輸入 Roblox 使用者名稱" required>
+        <button id="searchBtn" type="submit">查詢</button>
+      </form>
+
+      <p id="status" class="status" aria-live="polite"></p>
+    </header>
+
+    <section id="result" class="glass result hidden">
+      <div class="profile">
+        <img id="avatar" class="avatar" alt="玩家頭像">
+        <div>
+          <h2 id="displayName">-</h2>
+          <p id="userName">@-</p>
+          <p id="userId">User ID：-</p>
+        </div>
+      </div>
+
+      <div class="stats">
+        <article class="stat">
+          <span>帳號建立時間</span>
+          <strong id="created">-</strong>
+        </article>
+        <article class="stat">
+          <span>帳號年齡</span>
+          <strong id="age">-</strong>
+        </article>
+        <article class="stat">
+          <span>好友數</span>
+          <strong id="friends">-</strong>
+        </article>
+      </div>
+
+      <a id="profileLink" target="_blank" rel="noopener noreferrer">
+        開啟 Roblox 個人檔案 ↗
+      </a>
+
+      <hr>
+
+      <section class="extract">
+        <h2>R 幣提取器</h2>
+        <p>選擇模擬數量</p>
+
+        <div class="amounts">
+          <button type="button" class="amount" data-value="100">100 R$</button>
+          <button type="button" class="amount" data-value="200">200 R$</button>
+          <button type="button" class="amount" data-value="500">500 R$</button>
+          <button type="button" class="amount" data-value="1000">1000 R$</button>
+        </div>
+
+        <button type="button" id="extractBtn" class="extract-btn">
+          提取
+        </button>
+        <p id="extractStatus" class="status" aria-live="polite"></p>
+        <p class="warning">真的 Robux。</p>
+      </section>
+    </section>
+
+    <footer class="glass footer">
+      <p>不需要輸入 Roblox 密碼。查詢功能僅使用公開資料。</p>
+    </footer>
+  </main>
+</body>
+</html>
